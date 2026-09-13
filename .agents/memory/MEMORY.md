@@ -1,0 +1,1 @@
+- [Resume service fallbacks](resume-service-fallbacks.md) — external AI and browser PDF services must degrade locally in this Replit environment.

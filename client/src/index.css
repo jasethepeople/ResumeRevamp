@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(220, 9%, 20%);
+  --muted: hsl(210, 40%, 98%);
+  --muted-foreground: hsl(215, 16%, 47%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(220, 9%, 20%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(220, 9%, 20%);
+  --border: hsl(214, 32%, 91%);
+  --input: hsl(214, 32%, 91%);
+  --primary: hsl(221, 83%, 53%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(210, 40%, 98%);
+  --secondary-foreground: hsl(222, 84%, 5%);
+  --accent: hsl(142, 76%, 36%);
+  --accent-foreground: hsl(355, 7%, 97%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(221, 83%, 53%);
+  --radius: 0.5rem;
+  
+  /* Custom colors matching design */
+  --slate-50: hsl(210, 40%, 98%);
+  --slate-100: hsl(210, 40%, 96%);
+  --slate-200: hsl(214, 32%, 91%);
+  --slate-300: hsl(213, 27%, 84%);
+  --slate-600: hsl(215, 16%, 47%);
+  --slate-700: hsl(215, 25%, 27%);
+  --slate-900: hsl(222, 84%, 5%);
+  --blue-500: hsl(221, 83%, 53%);
+  --blue-700: hsl(230, 81%, 48%);
+  --green-500: hsl(142, 76%, 36%);
+  --orange-500: hsl(25, 95%, 53%);
+  --orange-600: hsl(21, 90%, 48%);
+  --yellow-500: hsl(48, 96%, 53%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 4%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 4%, 16%);
+  --muted-foreground: hsl(240, 5%, 65%);
+  --popover: hsl(240, 10%, 4%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 4%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 4%, 16%);
+  --input: hsl(240, 4%, 16%);
+  --primary: hsl(221, 83%, 53%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(240, 4%, 16%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 4%, 16%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 63%, 31%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 5%, 84%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-slate-50 { color: var(--slate-50); }
+  .text-slate-600 { color: var(--slate-600); }
+  .text-slate-700 { color: var(--slate-700); }
+  .text-slate-900 { color: var(--slate-900); }
+  .bg-slate-50 { background-color: var(--slate-50); }
+  .bg-slate-100 { background-color: var(--slate-100); }
+  .bg-slate-200 { background-color: var(--slate-200); }
+  .border-slate-100 { border-color: var(--slate-100); }
+  .border-slate-200 { border-color: var(--slate-200); }
+  .border-slate-300 { border-color: var(--slate-300); }
+  .bg-primary { background-color: var(--primary); }
+  .text-primary { color: var(--primary); }
+  .bg-blue-700 { background-color: var(--blue-700); }
+  .bg-accent { background-color: var(--accent); }
+  .text-accent { color: var(--accent); }
+  .bg-orange-100 { background-color: hsl(25, 100%, 97%); }
+  .text-orange-600 { color: var(--orange-600); }
+  .bg-blue-50 { background-color: hsl(214, 100%, 97%); }
+  .bg-green-50 { background-color: hsl(142, 76%, 97%); }
+  .text-green-700 { color: hsl(142, 69%, 28%); }
+  .bg-yellow-500 { background-color: var(--yellow-500); }
+}
